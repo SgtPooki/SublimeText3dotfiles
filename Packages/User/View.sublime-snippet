@@ -1,0 +1,153 @@
+<snippet>
+    <content><![CDATA[/**
+ * @fileOverview ${1:ObjectName} View Module File
+ *
+ * @author $TM_FULLNAME
+ * @version 1.0
+ */
+(function(${2:}) {
+    'use strict';
+
+    /**
+     * Description
+     *
+     * @name ${1:ObjectName}
+     * @class ${1:ObjectName} short description
+     * @constructor
+     *
+     * @since 1.0
+     */
+    var ${1:ObjectName} = function() {
+        this.init();
+    };
+
+    /**
+     * Initializes the UI Component View
+     * Runs a single setupHandlers call, followed by createChildren and layout
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.init = function() {
+        this.isEnabled = false;
+
+        return this.setupHandlers()
+                   .createChildren()
+                   .layout()
+                   .enable();
+    };
+
+    /**
+     * Binds the scope of any handler functions
+     * Should only be run on initialization of the view
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.setupHandlers = function() {
+        // Bind event handlers scope here
+        // this.onClickHandler = \$.proxy(this.onClick, this);
+        // this.onClickHandler = this.onClick.bind(this);
+
+        return this;
+    };
+
+    /**
+     * Create any child objects or references to DOM elements
+     * Should only be run on initialization of the view
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.createChildren = function() {
+        // Create any other dependencies here
+
+        return this;
+    };
+
+    /**
+     * Performs measurements and applys any positiong style logic
+     * Should be run anytime the parent layout changes
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.layout = function() {
+        // Insert any layout or measurement logic here
+
+        return this;
+    };
+
+    /**
+     * Enables the view
+     * Performs any event binding to handlers
+     * Exits early if it is already enabled
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.enable = function() {
+        if (this.isEnabled) {
+            return this;
+        }
+
+        this.isEnabled = true;
+
+        // Setup any event handlers
+
+        return this;
+    };
+
+    /**
+     * Disables the view
+     * Tears down any event binding to handlers
+     * Exits early if it is already disabled
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.disable = function() {
+        if (!this.isEnabled) {
+            return this;
+        }
+
+        this.isEnabled = false;
+
+        // Tear down any event handlers
+
+        return this;
+    };
+
+    /**
+     * Destroys the view
+     * Tears down any events, handlers, elements
+     * Should be called when the object should be left unused
+     *
+     * @returns {${1:ObjectName}}
+     * @since 1.0
+     */
+    ${1:ObjectName}.prototype.destroy = function() {
+        this.disable();
+        
+        return this;
+    };
+
+    // /**
+    //  * onClick Handler
+    //  * Performs this action on click
+    //  *
+    //  * @param {MouseEvent} event Click event
+    //  * @since 1.0
+    //  */
+    // ${1:ObjectName}.prototype.onClick = function(event) {
+    //     // Handle click event
+    // };
+
+    // Return the module, or set to a namespace
+    // Namespace.${1:ObjectName} = ${1:ObjectName};
+    // return ${1:ObjectName};
+}(${2:}));]]></content>
+    <tabTrigger>njs-view</tabTrigger>
+    <scope>source.js</scope>
+    <description>UI Component View Javascript Template</description>
+</snippet>

@@ -1,0 +1,10 @@
+{
+	"installed_packages":
+	[
+		"DocBlockr",
+		"JSHint",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeOnSaveBuild"
+	]
+}
